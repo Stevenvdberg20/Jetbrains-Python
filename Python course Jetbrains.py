@@ -115,4 +115,35 @@ def coffeeMaker():
     print(f"{coffee} of coffee beans")    
     print(f"{cup} of cups")    
     print(f"{money} of money")    
-coffeeMaker()
+#coffeeMaker()
+
+def catNames():
+    cafe_list = []
+    cats_list = []
+    while True:
+        cafe = input()
+        if cafe != "MEOW":
+            cafe_split = str.split(cafe) # Maakt van cafe een list waarbij elk woord een nieuw item is in de list
+            cafe_list.append(cafe_split[0]) # Add cafe name to list
+            cats_list.append(int(cafe_split[1])) # Add # of cats to separate list
+        else:
+            cafe_index = cats_list.index(max(cats_list)) # Goes through cats_list, finds the max, and returns the index of that max
+            print(cafe_list[cafe_index]) # Use index of highest cat number to find cafe name and print it
+            break
+
+#catNames()
+
+def primeCheck():
+    while True:
+        num = int(input())
+        if num > 1:
+            for i in range(2, num):
+                if num % i == 0:
+                    print("This number is not prime")
+                    break
+            else:
+                print("This number is prime")
+        else:
+            print("This number is not prime")
+            
+primeCheck()
