@@ -179,3 +179,5 @@ def primeCheck():
             print("This number is not prime")
             
 #primeCheck()
+
+Sknals
